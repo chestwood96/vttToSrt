@@ -10,6 +10,8 @@ namespace vttToSrt
     {
         static void Main(string[] args)
         {
+            // TODO parse cmd parameters
+            new Converter().Convert();
         }
     }
 }
