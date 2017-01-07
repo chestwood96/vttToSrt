@@ -83,5 +83,5 @@ Then open a console, navigate to the vttToSrt.exe file and type
 ```
 mono vttToSrt.exe -h
 ```
-
-Parsing loosely based on https://github.com/AlexPoint/SubtitlesParser
+## Credits
+The Parsing based on https://github.com/AlexPoint/SubtitlesParser.
