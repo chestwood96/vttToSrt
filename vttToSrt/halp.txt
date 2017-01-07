@@ -1,0 +1,53 @@
+﻿Converts WebVTT files to SRT
+
+vttToSrt [-h] [-q] [-v] [-f] [-s <string>] [-e <string>] [-r] <string> <string>
+
+  -h, --help --haaalp
+    Displays this help-file.
+
+  -q --quiet
+    Mutes all non error messages.
+    Overrides -v.
+
+  -v --verbose
+     More detailed output.
+
+  -f --force --plz
+    Forces files to be written even if they allready exist 
+    (normally files will not get overwritten).
+
+  -s <string> --search <string>
+    Tells the program to search for files with the "*.vtt" extention 
+    (or the one defined by -e) and convert them.
+
+  -e <string> --extention <string>
+    Defines a custom extention for -s to search for instead of the default 
+    "*.vtt" (make shure they are actually WebVTT files).
+
+  -r --recurse
+    Tells -s to do a recursive search instead of the default flat one.
+
+  <string>
+    The file to be converted.
+    This field is ignored if -s is used.
+
+  <string>
+    Defines the output filename.
+    By default the same filename as the input is used (with .srt extention).
+    This field is ignored if -s is used.
+
+Examples:
+  vttToSrt derp.vtt
+    Converts "derp.vtt" to "derp.srt".
+
+  vttToSrt derp.vtt derpinator.lozor
+    Converts "derp.vtt" to "derpinator.lozor".
+
+  vttToSrt -s movies -e awesomesubformat -r -v
+    Converts all WebVTT files (here wit the "awesomesubformat" extention) 
+    to srt recursively and with additional output.
+	
+  vttToSrt -f derp.vtt
+    Converts "derp.vtt" to "derp.srt" and overwrites the existing file.
+
+Written by Chestwood96 in 2017
